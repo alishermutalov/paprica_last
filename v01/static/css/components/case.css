@@ -1,0 +1,52 @@
+.cases-section {
+    margin: 25px 0;
+}
+
+.case__img {
+    height: 350px;
+    border-radius: 30.333px;
+    background: var(--white);
+    position: relative;
+    object-fit: cover;
+    border: none;
+}
+
+.case__img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30.333px;
+    border: none;
+}
+
+.cases {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.case {
+    width: 100%;
+}
+
+.case > button {
+    width: 100%;
+    cursor: pointer;
+}
+
+.case__subtitle {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.case__subtitle::before {
+    content: '';
+    display: inline-block; 
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px; 
+    background: var(--primary);
+}

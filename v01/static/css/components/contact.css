@@ -1,0 +1,38 @@
+.contact-section {
+    margin: 25px 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact__left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact__left--text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.contact__left--socm {
+    display: flex;
+    gap: 25px;
+}
+.contact__left--socm svg{
+    max-width: 30px;
+    transition: all .2s ease-in-out;
+    fill: var(--primary);
+}
+
+.contact__left--socm svg:hover {
+    fill: var(--primary);
+}
+
+.contact__right--map > iframe{
+    width: 500px;
+}

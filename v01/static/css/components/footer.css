@@ -1,0 +1,16 @@
+
+
+.footer-section {
+    background: var(--primary);
+    padding: 25px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo img {
+    width: 200px;
+}

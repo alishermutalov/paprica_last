@@ -1,0 +1,48 @@
+.newsgreed-section {
+    padding: 100px 0;
+}
+
+.newspage-section {
+    padding: 100px 0;
+}
+
+.newsgreed {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 25px;
+}
+
+.newsgreed > button {
+    border: none;
+    cursor: pointer;
+}
+
+.newsgreed__card{
+    height: 400px;
+    width: 400px;
+    position: relative;
+}
+
+.newsgreed__card > img {
+    width: 100%;
+}
+.news__img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.news__img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

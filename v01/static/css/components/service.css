@@ -1,0 +1,91 @@
+.service-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden!important;
+    margin: 25px 0;
+}
+
+.services__carousel {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+}
+.services {
+    height: 250px;
+    position: relative;
+}
+.service {
+    width: 335px;
+    height: 250px;
+    background-color: var(--white);
+    border-radius: 30.333px;
+    padding: 25px;
+}
+
+.service__controls {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service__controls > button {
+    position: relative;
+    z-index: 1;
+}
+
+.services__carousel > button {
+    border: none;
+    flex-direction: column;
+    gap: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    transition: all 0.2s ease-in-out;
+}
+
+.services__carousel > button:hover {
+    cursor: pointer;
+    background: var(--primary);
+}
+
+.service h2 {
+    color: var(--bg-shade);
+}
+
+.service span {
+    border: 1px solid var(--bg-shade);
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.service__title span {
+    color: var(--bg-shade);
+}
+
+.service__name {
+    text-align: start;
+}
+
+.service__name h3 {
+    color: var(--bg-shade);
+}
+
+
+.service__controls > button {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--bg-shade);
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel__control img {
+    max-width: 25px;
+    
+}

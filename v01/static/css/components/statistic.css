@@ -1,0 +1,36 @@
+.statistic-section {
+    margin: 25px 0;
+}
+
+.statistic {
+    background: var(--primary);
+    padding: 15px;
+    border-radius: 30.333px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.statistic__top--text > h2 {
+    color: var(--bg-shade);
+}
+
+
+.statistic__top {
+    display: flex;
+    justify-content: space-around;
+}
+.statistic__bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.statistic--crl {
+    border: 2px solid var(--bg-shade);
+    padding: 15px 60px;
+    border-radius: 100px;
+}
+
+.statistic--crl > * {
+    color: var(--bg-shade);
+}

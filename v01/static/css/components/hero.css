@@ -1,0 +1,162 @@
+.hero-section {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.hero__left {
+    width: 60%;
+}
+
+.hero__right {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.hero__left--btn {
+    display: flex;
+    gap: 12px;
+}
+.hero-form {
+    display: flex;
+    gap: 12px;
+}
+
+.hero__left--btn  input {
+    background: none;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    padding: 14px 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+}
+
+.hero__right > button {
+    cursor: pointer;
+}
+
+.hero__right > button:hover .link__text {
+    transition: all .1s emphasized;
+    
+}
+
+.hero__right:hover .crl-2--under img {
+    max-width: 15rem;
+}
+
+.hero__right--circle1 {
+    position: relative;
+    z-index: -2;
+}
+
+.hero__right--circle2 {
+    position: relative;
+    z-index: 1;
+}
+
+.crl-1 {
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--primary-opp);
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+}
+
+.crl-2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease-in-out;
+}
+.crl-2--top {
+    
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+}
+
+.crl-2--middle {
+    
+    position: absolute;
+}
+
+.crl-2--under {
+    
+    position: absolute;
+}
+
+.crl-2--under img {
+    max-width: 10rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.link__svg {
+    width: 100%;
+    height: auto;
+    transform-box: fill-box;
+    fill: var(--white);
+    stroke: var(--white);
+    stroke-width: 0.05em;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    width: 20rem;
+    height: 20rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: .35em;
+    word-spacing: .35em;
+}
+ 
+.link__arrow {
+    transform-origin: 50% 50%;
+    transition: transform var(--hoverDuration) / 2 var(--easeIn);
+}
+ 
+.link:hover .link__arrow {
+    transform: scale(1.1);
+    transition: transform var(--hoverDuration) var(--easeOut);
+}
+
+.link__arrow {
+   stroke-width: 0.075em;
+}
+ 
+.link__text {
+   animation: rotate normal infinite var(--rotationDuration) linear;
+   transform-origin: 50% 50%;
+   transition: all .1s ease-in-out;
+}
+
+.link:hover .link__text {
+   animation-play-state: paused;
+}
+
+.hero__right--circle2:hover .crl-2--under img {
+    max-width: 15rem;
+    transform: scale(1.5);
+}
+.hero__right--circle2:hover .crl-2--top {
+    transform: scale(0.5);
+} 
+
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+  

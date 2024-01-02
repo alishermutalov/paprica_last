@@ -1,0 +1,127 @@
+@import url(./components/navbar.css);
+@import url(./components/hero.css);
+@import url(./components/service.css);
+@import url(./components/case.css);
+@import url(./components/statistic.css);
+@import url(./components/about.css);
+@import url(./components/partners.css);
+@import url(./components/contact.css);
+@import url(./components/footer.css);
+@import url(./components/newsGreed.css);
+
+@import url(flex.css);
+
+@font-face {
+    font-family: 'Code Pro';
+    src: url(../assets/fonts/Code_Pro_Demo.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing:  'Montserrat', sans-serif;
+    -moz-osx-font-smoothing:  'Montserrat', sans-serif;
+    font-style: normal;
+    background-color: var(--bg-shade);
+    overflow-x:hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span{
+    margin: 0;
+    color: var(--white);
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+a:hover {
+    color: var(--primary);
+}
+
+:root {
+    --primary: #FF5B58;
+    --primary-opp: #ff5b587f;
+    --bg-shade: #0F1110;
+    --white: #ffffff;
+    --line-grey: #262626;
+
+    --easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+    --easeOut: cubic-bezier(0.33, 1, 0.68, 1);
+
+    --rotationDuration: 20s;
+    --hoverDuration: 0.3s;
+}
+
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--bg-shade);
+    border: none;
+}
+
+h1{
+    font-family: 'Code Pro', sans-serif;
+    font-size: 86px;
+    font-weight: normal;
+    line-height: auto;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: normal;
+    line-height: auto;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 34px;
+}
+
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.section__title {
+    margin: 25px 0;
+}

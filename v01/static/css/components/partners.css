@@ -1,0 +1,25 @@
+.partners-section {
+    margin: 25px 0;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+}
+
+.partners > button {
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100px;
+    background-color: var(--white);
+    border-radius: 30.333px;
+    object-fit: cover;
+    border: none;
+}
+
+.partners > button:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+}
