@@ -1,27 +1,38 @@
-let currentSlide = 0;
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + 5) % 5;
-    updateCarousel();
-}
+const toggleButton = document.querySelector('.nav__toggle');
+const navItems = document.querySelector('.nav__items');
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % 5;
-    updateCarousel();
-}
-
-function updateCarousel() {
-    const carousel = document.getElementById('carousel');
-    const offset = -currentSlide * 340; // Adjust the value based on the card width and gap
-    carousel.style.transform = `translateX(${offset}px)`;
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.querySelector('.nav__toggle');
-    const navItems = document.querySelector('.nav__items');
-
-    toggleButton.addEventListener('click', function () {
-        navItems.classList.toggle('show');
-        toggleButton.classList.toggle('open');
-    });
+toggleButton.addEventListener('click', function () {
+  navItems.classList.toggle('show');
+  toggleButton.classList.toggle('open');
 });
+
+
+const gap = 16;
+
+const carousel = document.getElementById("carousel"),
+  content = document.getElementById("content"),
+  next = document.getElementById("next"),
+  prev = document.getElementById("prev");
+
+next.addEventListener("click", e => {
+  carousel.scrollBy(width + gap, 0);
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "none";
+  }
+});
+prev.addEventListener("click", e => {
+  carousel.scrollBy(-(width + gap), 0);
+  if (carousel.scrollLeft - width - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "flex";
+  }
+});
+
+let width = carousel.offsetWidth;
+window.addEventListener("resize", e => (width = carousel.offsetWidth));

@@ -84,84 +84,92 @@
             </div>
         </div>
     </section>
-    <section style="overflow: hidden;" class="services-section" id='services'>
-        <div class="container">
-            <div class="section__title">
-                <h3>Чем мы занимаемся</h3>
-            </div>
-            <div class="services">
-                <div class="services__carousel" id="carousel">
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>SMM</h2>
-                        </div>
-                    </button>
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>Брендинг</h2>
-                        </div>
-                    </button>
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>Верстка сайта</h2>
-                        </div>
-                    </button>
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>Контекстная реклама</h2>
-                        </div>
-                    </button>
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>Продвижение товаров на Маркетплейсах</h2>
-                        </div>
-                    </button>
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>Видео-продакшн</h2>
-                        </div>
-                    </button>
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>Копирайтинг</h2>
-                        </div>
-                    </button>
-                    <button class="service">
-                        <div class="service__title">
-                            <span>услуга</span>
-                        </div>
-                        <div class="service__name">
-                            <h2>Разработка логотипов</h2>
-                        </div>
-                    </button>
-                </div>
-                <div class="service__controls">
-                    <button class="carousel__control ctrl-left" onclick="prevSlide()"><img src="{% static 'assets/icons/arrow-left.svg' %}" alt="" srcset=""></button>
-                    <button class="carousel__control ctrl-right" onclick="nextSlide()"><img src="{% static 'assets/icons/arrow-right.svg' %}" alt="" srcset=""></button>    
-                </div>
-            </div>
+    <section id="wrapper" class="carousel-section container">
+        <div class="section__title">
+            <h3>Чем мы занимаемся</h3>
         </div>
+      <div id="carousel" class="carousel">
+        <div id="content" class="carousel__cards">
+            <button class="card">
+                <div class="card__header">
+                    <span>info</span>
+                </div>
+                <div class="card__content">
+                    <h2>SMM</h2>
+                </div>
+            </button>
+            <button class="card">
+                <div class="card__header">
+                    <span>info</span>
+                </div>
+                <div class="card__content">
+                    <h2>SMM</h2>
+                </div>
+            </button>
+            <button class="card">
+                <div class="card__header">
+                    <span>info</span>
+                </div>
+                <div class="card__content">
+                    <h2>SMM</h2>
+                </div>
+            </button>
+            <button class="card">
+                <div class="card__header">
+                    <span>info</span>
+                </div>
+                <div class="card__content">
+                    <h2>SMM</h2>
+                </div>
+            </button>
+            <button class="card">
+                <div class="card__header">
+                    <span>info</span>
+                </div>
+                <div class="card__content">
+                    <h2>SMM</h2>
+                </div>
+            </button>
+            <button class="card">
+                <div class="card__header">
+                    <span>info</span>
+                </div>
+                <div class="card__content">
+                    <h2>SMM</h2>
+                </div>
+            </button>
+            <button class="card">
+                <div class="card__header">
+                    <span>info</span>
+                </div>
+                <div class="card__content">
+                    <h2>SMM</h2>
+                </div>
+            </button>
+        </div>
+      </div>
+      <button id="prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+        </svg>
+      </button>
+      <button id="next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+        </svg>
+      </button>
     </section>
     <section class="cases-section" , id="cases">
         <div class="container">
