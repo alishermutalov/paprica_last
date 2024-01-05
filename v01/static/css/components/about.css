@@ -1,7 +1,3 @@
-.about-section {
-    height: auto;
-    margin: 25px 0;
-}
 
 .about {
     display: flex;
@@ -55,7 +51,7 @@
     position: absolute;
     top: 110px;
     left: -55px;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .about__left--text {

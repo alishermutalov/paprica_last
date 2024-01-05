@@ -49,7 +49,7 @@
             <div class="newsgreed">
                 {% block content %}
                 {% for article in news %}
-                <button onclick="location.href='{% url 'news_detail' pk=article.pk %}'" class="newsgreed__card">
+                <button onclick="location.href='/news_detail.html'" class="newsgreed__card">
                     {% if article.image %}
                         <img src="{{ article.image.url }}" alt="{{ article.title }}">
                     {% else %}
