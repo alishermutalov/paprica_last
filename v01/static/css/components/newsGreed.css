@@ -8,27 +8,55 @@
 
 .newsgreed {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    gap: 25px;
-}
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
 
-.newsgreed > button {
-    border: none;
-    cursor: pointer;
+    justify-items: center;
+    gap: 50px;
 }
 
 .newsgreed__card{
-    height: 400px;
-    width: 400px;
-    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.newsgreed__card--img {
+    height: 300px;
 }
 
-.newsgreed__card > img {
+.newsgreed__card-button {
     width: 100%;
+    height: 100%;
+    background: none;
+    cursor: pointer;
+    border: none;
 }
+
+.newsgreed__card-button > img {
+    border-radius: 30.333px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .2s ease;
+}
+
+.newsgreed__card-button > img:hover {
+    transform: scale(1.02);
+}
+.newsgreed__card--sub p {
+    color: #8d8d8d;
+}
+
+.newsgreed__card--sub a {
+    font-size: 28px;
+    padding-bottom: 5px;
+}
+
+.newsgreed__card--sub > a:hover {
+    color: var(--white);
+}
+
 .news__img {
     position: relative;
     width: 100%;
@@ -42,6 +70,7 @@
 }
 
 .news__img > img {
+    border-radius: 30.333px;
     width: 100%;
     height: 100%;
     object-fit: cover;

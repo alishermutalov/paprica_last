@@ -25,9 +25,9 @@ SECRET_KEY =config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['st40.online','www.st40.online', 'localhost']
+# ALLOWED_HOSTS = ['st40.online','www.st40.online', 'localhost']
 
 
 # Application definition

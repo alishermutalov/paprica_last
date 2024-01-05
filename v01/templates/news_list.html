@@ -29,7 +29,7 @@
                         <div class="nav__items">
                             <a href="/#services" class="nav__item">Услуги</a>
                             <a href="/#cases" class="nav__item">Кейсы</a>
-                            <a href="/news/" class="nav__item">Новости</a>
+                            <a href="/news/" class="nav__item active">Новости</a>
                             <a href="/contacts/" class="nav__item">Контакты</a>
                         </div>
                         <div class="nav__toggle">
@@ -44,25 +44,33 @@
     <section class="newsgreed-section">
         <div class="container">
             <div class="section__title">
-                <h3>Последние новости, официальные события и внутренняя жизнь</h3>
+                <h3>Последние новости</h3>
             </div>
             <div class="newsgreed">
                 {% block content %}
                 {% for article in news %}
-                <button onclick="location.href='/news_detail.html'" class="newsgreed__card">
-                    {% if article.image %}
-                        <img src="{{ article.image.url }}" alt="{{ article.title }}">
-                    {% else %}
-                        <img src="" alt="Default Image">
-                    {% endif %}
-                </button>
-                <a href="{% url 'news_detail' pk=article.pk %}">{{ article.title }}</a>
-                <p>{{ article.pub_date }}</b>
+                <div class="newsgreed__card">
+                    <div class="newsgreed__card--img">
+                        <button  onclick="location.href='{% url 'news_detail' pk=article.pk %}'" class="newsgreed__card-button">
+                            {% if article.image %}
+                                <img src="{{ article.image.url }}" alt="{{ article.title }}">
+                            {% else %}
+                                <img src="" alt="Default Image">
+                            {% endif %}
+                        </button>
+                    </div>
+                    <div class="newsgreed__card--sub">
+                        <a href="{% url 'news_detail' pk=article.pk %}">{{ article.title }}</a>
+                        <p>{{ article.pub_date }}</p>
+                    </div>
+                </div>
                 {% endfor %}
                 {% endblock %}
             </div>
         </div>
     </section>
+    
+    
     <section class="contact-section">
         <div class="container">
             <div class="section__title">
