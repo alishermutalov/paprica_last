@@ -7,7 +7,7 @@ from .models import News, Case , Service
 
 def case_list(request):
     case = Case.objects.all()  # Retrieve all news objects from the database
-    return render(request, 'case_list.html', {'case': case})
+    return render(request, 'case_list.html', {'cases': case})
 
 def case_detail(request, pk):
     case_article = get_object_or_404(Case, pk=pk)  # Retrieve news article by primary key or return 404
