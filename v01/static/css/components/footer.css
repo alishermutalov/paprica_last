@@ -14,3 +14,7 @@
 .footer__logo img {
     width: 200px;
 }
+
+.footer__ds a:hover {
+    color: #b1b1b1;
+}
