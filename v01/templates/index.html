@@ -22,7 +22,7 @@
                     </div>
                     <div class="nav__menu">
                         <div class="nav__items">
-                            <a href="/services/" class="nav__item">Услуги</a>
+                            <a href="#wrapper" class="nav__item">Услуги</a>
                             <a href="/cases/" class="nav__item">Кейсы</a>
                             <a href="/news/" class="nav__item">Новости</a>
                             <a href="/contacts/" class="nav__item">Контакты</a>
@@ -44,7 +44,7 @@
                     <div class="hero__right--circle1">
                         <div class="crl-1"></div>
                     </div>
-                    <button onclick="location.href='#services'" class="hero__right--circle2">
+                    <button onclick="location.href='#wrapper'" class="hero__right--circle2">
                         <div class="crl-2">
                             <div class="crl-2--top"></div>
                             <div class="crl-2--middle">
@@ -91,7 +91,7 @@
       <div id="carousel" class="carousel">
         <div id="content" class="carousel__cards">
             {% for service in services %}
-            <button class="card">
+            <button onclick="location.href='{% url 'service_detail' pk=service.pk %}'" class="card">
                 <div class="card__header">
                     <span>info</span>
                 </div>
@@ -144,9 +144,13 @@
                         <h4>{{case.title}}</h4>
                     </div>
                 </div>
+
                 {% endfor %}
-            </div>  
+                
+            </div> 
+            <a href="/cases/">Подробное</a> 
         </div>
+        
     </section>
     <section class="statistic-section">
         <div class="container">

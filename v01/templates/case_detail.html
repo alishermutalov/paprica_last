@@ -42,7 +42,32 @@
         </nav>
     </header>
 
-    <h2>Case details</h2>
+    {% block content %}
+    <section class="newspage-section">
+        <div class="container">
+            <div class="section__title">
+                <h3>{{ case_article.title }}</h3>
+            </div>
+            
+  
+  
+            <div class="news">
+                <div class="news__img">
+                    {% if case_article.image %}
+                        <img src="{{ case_article.image.url }}" alt="{{ case_article.title }}">
+                    {% endif %}
+                </div>
+                <div class="news__paragraph">
+                    <p>{{ case_article.content |safe }}</p>
+                    
+                </div>
+                
+            </div>
+        </div>
+       
+    </section>
+    
+    {% endblock %}
     
     <section class="contact-section">
         <div class="container">
