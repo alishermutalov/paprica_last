@@ -51,7 +51,9 @@
                 {% for case in cases %}
                 <div class="case">
                     <button onclick="location.href='{% url 'case_detail' pk=case.pk %}'" class="case__img">
+                        {% if case.image %}
                         <img src="{{case.image.url}}" alt="{{case.title}}" srcset="">
+                        {% endif %}
                     </button>
                     <div class="case__subtitle">
                         <h4>{{case.title}}</h4>
