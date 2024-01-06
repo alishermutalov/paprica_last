@@ -1,4 +1,9 @@
+<!-- templates/news/news_list.html -->
+
 {% load static %}
+
+        
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="{% static "css/global.css" %}">
+    <link rel="stylesheet" href="{% static "css/global.css" %}">
     <title>Paprika | AGENCY</title>
 </head>
 <body>
@@ -18,12 +23,12 @@
             <div class="container">
                 <div class="nav">
                     <div class="nav__logo">
-                        <a href="/"><img src="{% static 'assets/images/logo.svg' %}" alt="" srcset=""></a>
+                        <a href="/"><img src="{% static "/assets/images/logo.svg" %}" alt="" srcset=""></a>
                     </div>
                     <div class="nav__menu">
                         <div class="nav__items">
-                            <a href="#services" class="nav__item">Услуги</a>
-                            <a href="#cases" class="nav__item">Кейсы</a>
+                            <a href="/#services" class="nav__item">Услуги</a>
+                            <a href="/#cases" class="nav__item active">Кейсы</a>
                             <a href="/news/" class="nav__item">Новости</a>
                             <a href="/contacts/" class="nav__item">Контакты</a>
                         </div>
@@ -36,195 +41,10 @@
             </div>
         </nav>
     </header>
+
+    <h2>case list</h2>
     
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero">
-                <div class="hero__right">
-                    <div class="hero__right--circle1">
-                        <div class="crl-1"></div>
-                    </div>
-                    <button onclick="location.href='#services'" class="hero__right--circle2">
-                        <div class="crl-2">
-                            <div class="crl-2--top"></div>
-                            <div class="crl-2--middle">
-                                <svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="link__svg" aria-labelledby="link1-title link1-desc">
-                                    <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none" fill="none" />
-                                    <text class="link__text">
-                                        <textPath href="#link-circle" stroke="none">
-                                            наши услуги наши услуги наши услуги
-                                        </textPath>
-                                    </text>
-                                </svg>
-                            </div>
-                            <div class="crl-2--under">
-                                <img src="{% static 'assets/images/circle.svg' %}" alt="" srcset="">
-                            </div>
-                            
-                        </div>
-                    </button>
-                </div>
-                <div class="hero__left">
-                    <div class="hero__left--text">
-                        <h2>КРЕАТИВНОЕ <br> МАРКЕТИНГОВОЕ АГЕНТСТВО</h2>
-                        <h1>PAPRIKA AGENCY</h1>
-                    </div>
-                    <div class="hero__left--btn">
-                        <form class="hero-form" method="post" >
-                            {% csrf_token %}
-
-                            <input type="text" name="name" placeholder="Имя:" value="{{ form.name.value|default_if_none:'' }}" required>
-                            <input type="text" name="phone_number" value="{{ form.phone_number.value|default:'+998' }}" required>
-
-                            <button type="submit" class="btn btn-primary">Связаться с нами</button>
-                        </form>     
-                
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="wrapper" class="carousel-section container">
-        <div class="section__title">
-            <h3>Чем мы занимаемся</h3>
-        </div>
-      <div id="carousel" class="carousel">
-        <div id="content" class="carousel__cards">
-            <button class="card">
-                <div class="card__header">
-                    <span>info</span>
-                </div>
-                <div class="card__content">
-                    <h2>SMM</h2>
-                </div>
-            </button>
-        </div>
-      </div>
-      <button id="prev">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path fill="none" d="M0 0h24v24H0V0z" />
-          <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
-        </svg>
-      </button>
-      <button id="next">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path fill="none" d="M0 0h24v24H0V0z" />
-          <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
-        </svg>
-      </button>
-    </section>
-    <section class="cases-section" , id="cases">
-        <div class="container">
-            <div class="section__title">
-                <h3>Кейсы</h3>
-            </div>
-            <div class="cases">
-                <div class="case">
-                    <button class="case__img">
-                        <img src="{% static "/assets/images/case_1.png" %}" alt="" srcset="">
-                    </button>
-                    <div class="case__subtitle">
-                        <h4>Anteks</h4>
-                    </div>
-                </div>
-                <div class="case">
-                    <button class="case__img">
-                        <img src="{% static "/assets/images/case_2.png" %}" alt="" srcset="">
-                    </button>
-                    <div class="case__subtitle">
-                        <h4>Wella</h4>
-                    </div>
-                </div>
-                <div class="case">
-                    <button class="case__img">
-                        <img src="{% static "/assets/images/case_3.png" %}" alt="" srcset="">
-                    </button>
-                    <div class="case__subtitle">
-                        <h4>Perfect Elevators</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="statistic-section">
-        <div class="container">
-            <div class="statistic">
-                <div class="statistic__top">
-                    <div class="statistic__top--text">
-                        <h2>«Паприка»<br> в цифрах</h2>
-                    </div>
-                    <div class="statistic--crl">
-                        <h1>5 лет+</h1>
-                        <span>на рынке</span>
-                    </div>
-                    <div class="statistic--crl">
-                        <h1>90+</h1>
-                        <span>кейсов</span>
-                    </div>
-                </div>
-                
-                <div class="statistic__bottom">
-                    <div class="statistic--crl">
-                        <h1>900+</h1>
-                        <span>запущенных компании</span>
-                    </div>
-                    <div class="statistic--crl">
-                        <h1>22+</h1>
-                        <span>сотрудника в компани</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="about-section">
-        <div class="container">
-            <div class="section__title">
-                <h3>Ведение</h3>
-            </div>
-            <div class="about">
-                <div class="about__left">
-                    <div class="about__left--text">
-                        <p>Наше видение и профессиональный подход помогает добиваться конкретных результатов, используя все возможности нашего агентства и предоставленных маркетинговых инструментов.</p>
-                    </div>
-                    <img src="{% static "/assets/images/logo_one.png" %}" alt="" srcset="">
-                </div>
-                <div class="about__right">
-                    <ol class="custom-list">
-                        <li class="first-item">Ваш Продукт или Услуга</li>
-                        <li>Постановка задач от Заказчика</li>
-                        <li>Выявление оптимального инструмента</li>
-                        <li>Анализ Рынка</li>
-                        <li>Определение Целевой Аудитории</li>
-                        <li>Скомпонованная Стратегия Продвижения</li>
-                        <li>Идея и Креатив</li>
-                        <li>Реализация Контент Плана</li>
-                        <li class="last-item">Приход Первых Покупателей</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="partners-section">
-        <div class="container">
-            <div class="partners">
-                <button class="partner"> <!--img path--> </button>
-                <button class="partner"></button>
-                <button class="partner"></button>
-                <button class="partner"></button>
-                <button class="partner"></button>
-            </div>
-        </div>
-    </section>
+    
     <section class="contact-section">
         <div class="container">
             <div class="section__title">
@@ -298,4 +118,5 @@
     </div>
    
 </footer>
+</body>
 </html>

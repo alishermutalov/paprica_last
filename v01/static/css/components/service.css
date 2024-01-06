@@ -50,6 +50,7 @@
     border-radius: 30.333px;
     border: none;
     display: flex;
+    align-items: flex-start;
     transition: all 0.2s ease;
 }
 
