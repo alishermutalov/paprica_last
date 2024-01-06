@@ -59,7 +59,7 @@
 
 .news__img {
     position: relative;
-    width: 100%;
+    width: auto;
     height: 300px;
 }
 
@@ -71,7 +71,7 @@
 
 .news__img > img {
     border-radius: 30.333px;
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
 }
