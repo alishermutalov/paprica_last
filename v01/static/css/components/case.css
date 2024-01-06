@@ -1,3 +1,13 @@
+.cases {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.case {
+    width: calc(33.33% - 15px); /* 33.33% width for each column with 15px gap in between */
+    box-sizing: border-box;
+}
 
 .case__img {
     height: 350px;
@@ -16,16 +26,6 @@
     border: none;
 }
 
-.cases {
-    display: flex;
-    gap: 15px;
-    width: 100%;
-}
-
-.case {
-    width: 100%;
-}
-
 .case > button {
     width: 100%;
     cursor: pointer;
@@ -40,10 +40,10 @@
 
 .case__subtitle::before {
     content: '';
-    display: inline-block; 
-    width: 10px; 
+    display: inline-block;
+    width: 10px;
     height: 10px;
     border-radius: 50%;
-    margin-right: 5px; 
+    margin-right: 5px;
     background: var(--primary);
 }
