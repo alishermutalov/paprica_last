@@ -95,6 +95,11 @@ a:hover {
     background-color: var(--primary);
     color: var(--bg-shade);
     border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    box-shadow: #ff5b5876 0px 5px 15px;
 }
 
 h1{

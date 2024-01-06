@@ -57,11 +57,16 @@
         transform: rotate(45deg) translate(-5px, -6px);
     }
     h1 {
-        font-size: 52px!important;
+        font-size: 42px!important;
     }
 
     h2 {
         font-size: 34px!important;
+    }
+
+    .section__title > h3 {
+        font-size: 28px!important;
+        line-height: auto!important;
     }
 
     .container{
