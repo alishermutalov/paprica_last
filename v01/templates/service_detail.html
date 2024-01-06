@@ -37,7 +37,25 @@
         </nav>
     </header>
 
-    
+    {% block content %}
+    <section class="newspage-section">
+        <div class="container">
+            <div class="section__title">
+                <h3>{{ service_article.title }}</h3>
+            </div>
+            <div class="news">
+                <div class="news__img">
+                    {% if service_article.image %}
+                        <img src="{{ service_article.image.url }}" alt="{{ service_article.title }}">
+                    {% endif %}
+                </div>
+                <div class="news__paragraph">
+                    <p>{{ service_article.content |safe }}</p>  
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
     
     <section class="contact-section">
         <div class="container">

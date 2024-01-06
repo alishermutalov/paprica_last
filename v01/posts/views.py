@@ -14,9 +14,6 @@ def case_detail(request, pk):
     return render(request, 'case_detail.html', {'case_article': case_article})
 
 
-def service_list(request):
-    service = Service.objects.all()  # Retrieve all news objects from the database
-    return render(request, 'service_list.html', {'service': service})
 
 def service_detail(request, pk):
     service_article = get_object_or_404(Service, pk=pk)  # Retrieve news article by primary key or return 404
