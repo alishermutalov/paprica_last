@@ -31,7 +31,7 @@
                             <div class="burger"></div>
                         </div>
                     </div>
-                    <span class="nav__phone"><a href="tel:+998996166669">+998 99 616-66-69</a></span>
+                    <span class="nav__phone">+998 99 616-66-69</span>
                 </div>
             </div>
         </nav>
@@ -132,14 +132,9 @@
             </div>
             
             <div class="cases">
-<<<<<<< HEAD
-                {% for case in cases %}
+                {% for case in cases|slice:":3" %}
                 <div class="case">
                     
-=======
-                {% for case in cases|slice:":3" %} {# Limit to only the first 3 cases #}
-                <div class="case">
->>>>>>> 603caef1d11bc27ebe42cb8f6e63827a1848eaf9
                     <button onclick="location.href='{% url 'case_detail' pk=case.pk %}'" class="case__img">
                         {% if case.image %}
                         <img src="{{case.image.url}}" alt="{{case.title}}" srcset="">
@@ -153,12 +148,8 @@
             </div>
             
         </div>
-<<<<<<< HEAD
         
     </section>
-=======
-    </section>    
->>>>>>> 603caef1d11bc27ebe42cb8f6e63827a1848eaf9
     <section class="statistic-section">
         <div class="container">
             <div class="statistic">
@@ -236,9 +227,7 @@
             <div class="contact">
                 <div class="contact__left">
                     <div class="contact__left--text">
-                        <p>Телефон:</p>
-                        <a href="tel:+998996166669">+998 99 616-66-69</a>
-                        <a href="tel:+998996166669">+998 99 616-66-69</a>
+                        <p>Телефон: +998 (99) 616 66 69 | +998 (99) 618 66 69 </p>
                         <div class="email">
                             <p>Электронная почта:</p>
                             <a href="">paprikads@gmail.com</a>
