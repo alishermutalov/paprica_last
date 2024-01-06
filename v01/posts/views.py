@@ -2,9 +2,25 @@ from django.shortcuts import render, redirect
 from .forms import ContactForm
 from .forms import ContactForm
 from django.shortcuts import render, get_object_or_404
-from .models import News
+from .models import News, Case , Service
 # Create your views here.
 
+def case_list(request):
+    case = Case.objects.all()  # Retrieve all news objects from the database
+    return render(request, 'case_list.html', {'case': case})
+
+def case_detail(request, pk):
+    case_article = get_object_or_404(Case, pk=pk)  # Retrieve news article by primary key or return 404
+    return render(request, 'case_detail.html', {'case_article': case_article})
+
+
+def service_list(request):
+    service = Service.objects.all()  # Retrieve all news objects from the database
+    return render(request, 'service_list.html', {'service': service})
+
+def service_detail(request, pk):
+    service_article = get_object_or_404(Service, pk=pk)  # Retrieve news article by primary key or return 404
+    return render(request, 'service_detail.html', {'service_article': service_article})
 
 
 def news_list(request):
@@ -30,6 +46,14 @@ def index(request):
             return redirect('success')  # Redirect after POST
     else:
         form = ContactForm()  # An unbound form
-
-    return render(request, 'index.html', {'form': form})
+    cases = Case.objects.all()
+    services = Service.objects.all()
+    
+    context = {
+        'form':form,
+        'cases':cases,
+        'services':services,
+               }
+    
+    return render(request, 'index.html', context)
 
