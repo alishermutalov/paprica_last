@@ -22,8 +22,8 @@
                     </div>
                     <div class="nav__menu">
                         <div class="nav__items">
-                            <a href="#services" class="nav__item">Услуги</a>
-                            <a href="#cases" class="nav__item">Кейсы</a>
+                            <a href="/services/" class="nav__item">Услуги</a>
+                            <a href="/cases/" class="nav__item">Кейсы</a>
                             <a href="/news/" class="nav__item">Новости</a>
                             <a href="/contacts/" class="nav__item">Контакты</a>
                         </div>
@@ -90,14 +90,16 @@
         </div>
       <div id="carousel" class="carousel">
         <div id="content" class="carousel__cards">
+            {% for service in services %}
             <button class="card">
                 <div class="card__header">
                     <span>info</span>
                 </div>
                 <div class="card__content">
-                    <h2>SMM</h2>
+                    <h2>{{ service.title }}</h2>
                 </div>
             </button>
+            {% endfor %}
         </div>
       </div>
       <button id="prev">
@@ -130,29 +132,15 @@
             </div>
             <div class="cases">
                 <div class="case">
-                    <button class="case__img">
-                        <img src="{% static "/assets/images/case_1.png" %}" alt="" srcset="">
+                    {% for case in cases %}
+                    <button onclick="location.href='{% url 'case_detail' pk=case.pk %}'" class="case__img">
+                        <img src="{{case.image.url}}" alt="{{case.title}}" srcset="">
                     </button>
                     <div class="case__subtitle">
-                        <h4>Anteks</h4>
+                        <h4>{{case.title}}</h4>
                     </div>
                 </div>
-                <div class="case">
-                    <button class="case__img">
-                        <img src="{% static "/assets/images/case_2.png" %}" alt="" srcset="">
-                    </button>
-                    <div class="case__subtitle">
-                        <h4>Wella</h4>
-                    </div>
-                </div>
-                <div class="case">
-                    <button class="case__img">
-                        <img src="{% static "/assets/images/case_3.png" %}" alt="" srcset="">
-                    </button>
-                    <div class="case__subtitle">
-                        <h4>Perfect Elevators</h4>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
