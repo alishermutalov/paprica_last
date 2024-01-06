@@ -31,7 +31,7 @@
                             <div class="burger"></div>
                         </div>
                     </div>
-                    <span class="nav__phone">+998 99 616-66-69</span>
+                    <span class="nav__phone"><a href="tel:+998996166669">+998 99 616-66-69</a></span>
                 </div>
             </div>
         </nav>
@@ -131,8 +131,8 @@
                 <h3>Кейсы</h3>
             </div>
             <div class="cases">
+                {% for case in cases %}
                 <div class="case">
-                    {% for case in cases %}
                     <button onclick="location.href='{% url 'case_detail' pk=case.pk %}'" class="case__img">
                         <img src="{{case.image.url}}" alt="{{case.title}}" srcset="">
                     </button>
@@ -221,7 +221,9 @@
             <div class="contact">
                 <div class="contact__left">
                     <div class="contact__left--text">
-                        <p>Телефон: +998 (99) 616 66 69 | +998 (99) 618 66 69 </p>
+                        <p>Телефон:</p>
+                        <a href="tel:+998996166669">+998 99 616-66-69</a>
+                        <a href="tel:+998996166669">+998 99 616-66-69</a>
                         <div class="email">
                             <p>Электронная почта:</p>
                             <a href="">paprikads@gmail.com</a>
