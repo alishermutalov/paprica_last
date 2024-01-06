@@ -130,11 +130,15 @@
             <div class="section__title">
                 <h3>Кейсы</h3>
             </div>
+            
             <div class="cases">
+                {% for case in cases %}
                 <div class="case">
-                    {% for case in cases %}
+                    
                     <button onclick="location.href='{% url 'case_detail' pk=case.pk %}'" class="case__img">
+                        {% if case.image %}
                         <img src="{{case.image.url}}" alt="{{case.title}}" srcset="">
+                        {% endif %}
                     </button>
                     <div class="case__subtitle">
                         <h4>{{case.title}}</h4>
@@ -142,7 +146,9 @@
                 </div>
                 {% endfor %}
             </div>
+            
         </div>
+        
     </section>
     <section class="statistic-section">
         <div class="container">
