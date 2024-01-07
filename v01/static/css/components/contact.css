@@ -5,13 +5,13 @@
 .contact {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
 
 .contact__left {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: space-between;
 }
 
 .contact__left--text {
@@ -34,5 +34,5 @@
 }
 
 .contact__right--map > iframe{
-    width: 500px;
+    width: 800px;
 }
