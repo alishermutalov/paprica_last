@@ -46,11 +46,6 @@
                 <h3>{{ service_article.title }}</h3>
             </div>
             <div class="news">
-                <div class="news__img">
-                    {% if service_article.image %}
-                        <img src="{{ service_article.image.url }}" alt="{{ service_article.title }}">
-                    {% endif %}
-                </div>
                 <div class="news__paragraph">
                     <p>{{ service_article.content |safe }}</p>  
                 </div>
